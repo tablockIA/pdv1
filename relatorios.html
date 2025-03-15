@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>DeliveryPDV - Relatórios</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-base-content min-h-screen">
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow-sm fixed w-full z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <i class="fa-solid fa-store text-blue-600 text-2xl"></i>
+          <span class="ml-2 text-xl font-bold text-gray-800">DeliveryPDV</span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <span onclick="window.location.href='index.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Dashboard</span>
+          <span onclick="window.location.href='pedidos.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Pedidos</span>
+          <span onclick="window.location.href='cardapio.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Cardápio</span>
+          <span onclick="window.location.href='relatorios.html'" class="text-blue-600 cursor-pointer">Relatórios</span>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <i class="fa-regular fa-bell text-gray-600"></i>
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" class="w-8 h-8 rounded-full"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo dos Relatórios -->
+  <main class="pt-16 p-6">
+    <h2 class="text-2xl font-bold mb-4">Relatórios e Análises</h2>
+    <!-- Filtros -->
+    <div class="flex flex-wrap gap-4 mb-6">
+      <input type="date" class="border rounded-lg px-4 py-2">
+      <input type="date" class="border rounded-lg px-4 py-2">
+      <select class="border rounded-lg px-4 py-2">
+        <option>Todos os Status</option>
+        <option>Concluído</option>
+        <option>Cancelado</option>
+      </select>
+      <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Exportar</button>
+    </div>
+
+    <!-- Exemplo de Tabela de Relatórios -->
+    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+      <table class="w-full">
+        <thead>
+          <tr class="bg-gray-50">
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pedido</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr>
+            <td class="px-6 py-4">#12345</td>
+            <td class="px-6 py-4">R$ 75,90</td>
+            <td class="px-6 py-4">15/03/2025</td>
+          </tr>
+          <!-- Mais linhas se precisar... -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

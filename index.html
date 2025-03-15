@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>DeliveryPDV - Dashboard</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-base-content min-h-screen">
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow-sm fixed w-full z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <i class="fa-solid fa-store text-blue-600 text-2xl"></i>
+          <span class="ml-2 text-xl font-bold text-gray-800">DeliveryPDV</span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <span onclick="window.location.href='index.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Dashboard</span>
+          <span onclick="window.location.href='pedidos.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Pedidos</span>
+          <span onclick="window.location.href='cardapio.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Cardápio</span>
+          <span onclick="window.location.href='relatorios.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Relatórios</span>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <i class="fa-regular fa-bell text-gray-600"></i>
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" class="w-8 h-8 rounded-full"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="pt-16 container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+      <!-- Exemplo de Cards de Estatísticas -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="flex items-center">
+          <div class="p-3 bg-blue-100 rounded-full">
+            <i class="fa-solid fa-shopping-bag text-blue-600"></i>
+          </div>
+          <div class="ml-4">
+            <h3 class="text-sm text-gray-500">Pedidos Hoje</h3>
+            <p class="text-2xl font-bold text-gray-800">157</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="flex items-center">
+          <div class="p-3 bg-green-100 rounded-full">
+            <i class="fa-solid fa-dollar-sign text-green-600"></i>
+          </div>
+          <div class="ml-4">
+            <h3 class="text-sm text-gray-500">Receita Diária</h3>
+            <p class="text-2xl font-bold text-gray-800">R$ 4.892</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="flex items-center">
+          <div class="p-3 bg-yellow-100 rounded-full">
+            <i class="fa-solid fa-clock text-yellow-600"></i>
+          </div>
+          <div class="ml-4">
+            <h3 class="text-sm text-gray-500">Pedidos Ativos</h3>
+            <p class="text-2xl font-bold text-gray-800">23</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="flex items-center">
+          <div class="p-3 bg-purple-100 rounded-full">
+            <i class="fa-solid fa-motorcycle text-purple-600"></i>
+          </div>
+          <div class="ml-4">
+            <h3 class="text-sm text-gray-500">Em Entrega</h3>
+            <p class="text-2xl font-bold text-gray-800">12</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-white border-t mt-8">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex items-center justify-between">
+        <p class="text-sm text-gray-600">&copy; 2025 DeliveryPDV. Todos os direitos reservados.</p>
+        <div class="flex space-x-4">
+          <span class="text-gray-600 hover:text-blue-600 cursor-pointer"><i class="fa-solid fa-question-circle"></i></span>
+          <span class="text-gray-600 hover:text-blue-600 cursor-pointer"><i class="fa-solid fa-gear"></i></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

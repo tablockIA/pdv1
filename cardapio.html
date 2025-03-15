@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>DeliveryPDV - Cardápio</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-base-content min-h-screen">
+  <!-- Cabeçalho -->
+  <header class="bg-white border-b">
+    <div class="px-6 py-4">
+      <div class="flex items-center justify-between">
+        <h1 class="text-2xl font-semibold">Gerenciador de Cardápio</h1>
+        <div class="flex items-center space-x-4">
+          <i class="fa-regular fa-bell text-xl text-gray-600"></i>
+          <button class="text-gray-600 hover:text-gray-800">
+            <i class="fa-solid fa-gear text-xl"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Menu de navegação -->
+      <nav class="mt-2 flex space-x-4">
+        <span onclick="window.location.href='index.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Dashboard</span>
+        <span onclick="window.location.href='pedidos.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Pedidos</span>
+        <span onclick="window.location.href='cardapio.html'" class="text-blue-600 cursor-pointer">Cardápio</span>
+        <span onclick="window.location.href='relatorios.html'" class="text-gray-600 hover:text-blue-600 cursor-pointer">Relatórios</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo do Cardápio -->
+  <main class="p-6 mt-16">
+    <!-- Exemplo de listagem de pratos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card de um prato -->
+      <div class="bg-white rounded-xl shadow p-6">
+        <div class="flex items-center">
+          <img src="https://via.placeholder.com/100" alt="Imagem do Prato" class="w-16 h-16 rounded-lg object-cover">
+          <div class="ml-4">
+            <h3 class="text-lg font-semibold">Pizza Margherita</h3>
+            <p class="text-gray-500">R$ 45,90</p>
+          </div>
+        </div>
+        <div class="mt-4 flex space-x-2">
+          <button class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700">Editar</button>
+          <button class="px-3 py-1 bg-yellow-600 text-white rounded hover:bg-yellow-700">Pausar</button>
+          <button class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">Excluir</button>
+        </div>
+      </div>
+      <!-- Adicione mais cards de pratos conforme necessário... -->
+    </div>
+  </main>
+</body>
+</html>
