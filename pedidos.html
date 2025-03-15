@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>DeliveryPDV - Pedidos</title>
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-50 text-base-content min-h-screen">
@@ -95,7 +97,7 @@
               <button onclick="abrirModal()" class="text-blue-600 hover:text-blue-900">Ver Detalhes</button>
             </td>
           </tr>
-          <!-- Outras linhas de pedidos podem ser adicionadas aqui -->
+          <!-- Adicione mais linhas de pedidos conforme necessário -->
         </tbody>
       </table>
     </div>
@@ -155,47 +157,3 @@
             Atualizar Status
           </button>
           <button onclick="despacharPedido()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
-            <i class="fa-solid fa-paper-plane mr-2"></i>
-            Despachar Pedido
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Funções JavaScript -->
-  <script>
-    function abrirModal() {
-      document.getElementById('order-modal').classList.remove('hidden');
-    }
-    function fecharModal() {
-      document.getElementById('order-modal').classList.add('hidden');
-    }
-    function despacharPedido() {
-      // Substitua pela URL do seu webhook do n8n/Evolution
-      const webhookUrl = 'https://seun8n.exemplo.com/webhook/despachar-pedido';
-      const data = {
-        pedidoId: '12345',
-        clienteTelefone: '5511987654321',
-        mensagem: 'Seu pedido foi despachado!'
-      };
-      fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('Pedido despachado! Mensagem enviada via WhatsApp.');
-        } else {
-          alert('Houve um erro ao despachar o pedido.');
-        }
-      })
-      .catch(error => {
-        console.error('Erro:', error);
-        alert('Houve um erro ao despachar o pedido.');
-      });
-    }
-  </script>
-</body>
-</html>
